@@ -8,7 +8,7 @@
       <meta name="google-signin-scope" content="profile email">
       <meta name="google-signin-client_id" content="858926206600-4civml71qto6t35fd8hvosi4so9ku55e.apps.googleusercontent.com">
 	  <link rel="stylesheet" href="assets/css/main.css" />
-     <!--  <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+ 	  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
       <script src="https://apis.google.com/js/platform.js" async defer></script> 
       <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
