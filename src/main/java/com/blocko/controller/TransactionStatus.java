@@ -40,8 +40,6 @@ public class TransactionStatus extends HttpServlet {
 					break;
 				}
 			}
-			
-			
 		} catch (CoinStackException e) {
 			e.printStackTrace();
 		}
