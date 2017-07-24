@@ -1,0 +1,92 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: monospace;
+  background-color: #000;
+  min-height: 500px;
+}
+
+.banner-e{
+  position: absolute;
+  top:0;
+  left:110px;
+  z-index:20;
+}
+
+.banner-suggest-e{
+  position: absolute;
+  top:20px;
+  left:250px;
+  display:none;
+  z-index:0;
+}
+
+
+.canvas-e {
+  background-color: transparent;
+  position:relative;
+  z-index:1;
+}
+.canvas-e:hover ~ .circle1-be,
+.canvas-e:hover ~ .circle2-be,
+.canvas-e:hover ~ .circle3-be {
+  top: 530px;
+  left: 800px;
+  width: 250px;
+  height: 250px;
+}
+.canvas-e:hover ~ .circle1-be {
+  -webkit-transition: all 0.9s ease-out;
+  -moz-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+}
+.canvas-e:hover ~ .circle2-be {
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -ms-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+}
+.canvas-e:hover ~ .circle2-be {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+}
+.canvas-e:hover ~ .twitter-icon-e {
+  left: 880px;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+@font-face {
+  font-family: "ToneDeaf BB";
+  src: url("https://s.cdpn.io/6859/ToneDeafBB.eot?") format("eot"), url("https://s.cdpn.io/6859/ToneDeafBB.woff") format("woff"), url("https://s.cdpn.io/6859/ToneDeafBB.ttf") format("truetype"), url("fhttps://s.cdpn.io/6859/ToneDeafBB.svg#ToneDeafBB") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.guitar-image-e {
+  position: absolute;
+  display: none;
+}
+.font-holder-e {
+  font-family: 'ToneDeaf BB';
+}
+.my-gui-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:21;
+}

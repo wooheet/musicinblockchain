@@ -1,0 +1,177 @@
+@CHARSET "EUC-KR";
+ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, 
+        big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, 
+        dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, 
+        canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        header li{
+            float:left; list-style:none; margin-left:50px; font-size:.9em;
+        }
+
+        header a{
+            color:#ffffff; text-decoration:none;
+        }
+
+ 
+        header .top_menu ul {
+            overflow:hidden; width:1300px; margin:0 auto 3px; 
+        }
+
+        header .top_menu li {
+           float:left; margin:0; text-align:center;
+        }
+
+        header .top_menu a {
+           display:block; color:#282828;
+           font-size:1.1em; padding:10px 30px; border:1px solid #cccccc;
+        }
+        
+        header .top_menu a:hover {background-color:#FF99CC; }
+
+        header .top_menu li:first-child a {
+            border-radius:10px 0 0 10px;
+        }
+
+        header .top_menu li:last-child a {
+            border-radius:0 10px 10px 0;
+        }
+        
+
+        header .label {
+            overflow:hidden;
+            width:1300px; margin:0 auto;
+            padding:15px;
+            line-height:35px;
+            color:#282828;
+            font-size:1.1em;
+        }
+        
+        body .label{
+        	overflow:hidden;
+            width:1300px; margin:0 auto;
+            padding:15px;
+            line-height:35px;
+            color:#282828;
+            font-size:1.1em;
+        }
+
+        #content {
+            width:1300px; margin:0 auto;
+        }
+
+        #content .section1 div {
+            margin-top:10px;
+            height:300px; line-height:450px; text-align:center;         
+        }
+        #content .section2 div {
+            margin-top:10px;
+            height:300px; line-height:450px; text-align:center;             
+        }
+        
+        #content .section3 div {
+            margin-top:10px;
+            height:300px; line-height:450px; text-align:center;                  
+        }
+        
+         #content .section4 div {
+            margin-top:10px;
+            height:300px; line-height:450px; text-align:center;                 
+        }
+        
+         #content .section5 div {
+            margin-top:10px;
+            height:300px; line-height:450px; text-align:center;                
+        }
+        
+         #content .section6 div {
+            margin-top:10px;
+            height:300px; line-height:450px; text-align:center;       
+        }
+          #content .section7 div {
+            margin-top:10px;
+            height:300px; line-height:450px; text-align:center;    
+               
+        }       
+
+        #content .music_product {
+            overflow:hidden;
+        }
+
+        #content .music_product ul li {
+            list-style:none; float:left; margin:0 15px 0 0;
+            width:200px; height:200px; border:1px solid #cccccc; box-sizing:border-box;
+            cursor: pointer;
+        }
+	
+        #content .like_product {
+            overflow:hidden;
+        }
+
+        #content .like_product ul li {
+            list-style:none; float:left; margin:0 15px 0 0;
+            width:200px; height:200px; border:1px solid #cccccc; box-sizing:border-box;
+            cursor: pointer;
+        }
+
+        #content .playlists_product {
+            overflow:hidden;
+        }
+
+        #content .playlists_product ul li {
+            list-style:none; float:left; margin:0 15px 0 0;
+            width:200px; height:200px; border:1px solid #cccccc; box-sizing:border-box;
+            cursor: pointer;
+        }
+
+        #content .Albums_product {
+            overflow:hidden;
+        }
+
+        #content .Albums_product ul li {
+            list-style:none; float:left; margin:0 15px 0 0;
+            width:200px; height:200px; border:1px solid #cccccc; box-sizing:border-box;
+            cursor: pointer;
+        }
+
+        #content .stations_product {
+            overflow:hidden;
+        }
+
+        #content .stations_product ul li {
+            list-style:none; float:left; margin:0 15px 0 0;
+            width:200px; height:200px; border:1px solid #cccccc; box-sizing:border-box;
+            cursor: pointer;
+        }
+
+        #content .following_product {
+            overflow:hidden;
+        }
+
+        #content .following_product ul li {
+            list-style:none; float:left; margin:0 13px 0 0;
+            width:200px; height:200px; border:1px solid #cccccc; box-sizing:border-box;
+            cursor: pointer;
+        }
+
+        footer {
+            width:1300px; height:310px; margin:20px auto 0;
+            overflow:hidden;
+        }
+
+        footer div {
+            float:left; height:250px;
+            border:1px solid #cccccc; box-sizing:border-box;
+        }
+
+        footer div {
+            width:1300px; height:50px; margin:10px auto 0; background-color:#242424; color:#ffffff;
+            text-align:center; line-height:50px;
+            clear:both; border:0;
+        }
