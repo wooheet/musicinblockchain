@@ -116,6 +116,16 @@ div #stampstatus>#bg {
 		  text-align: center;
 		  margin-left: 200%;
 		}  */
+		
+.0101{
+
+width : 300px;
+height: 300px;
+border: 1px;
+border-style: solid;
+border-color: orange;
+
+}
 </style>
 
 </head>
@@ -126,20 +136,27 @@ div #stampstatus>#bg {
 	String musicHash = (String)request.getAttribute("musicHash");
 	String txId = (String)request.getAttribute("txId");
 	int Confirmations = (Integer)request.getAttribute("Confirmations");
+	String Timestamp = (String)request.getAttribute("Timestamp");
 	
 	%>
 	<div class="row">
 		<div class="col-sm-12">
 		<br/>
 		<br/>
-		
 			<img src="/FairMusic/images/miniline.png" />
+			
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-sm-3">
+		<% if(audiodto.getAudio_image()==null){%>
+		<%System.out.println("오디오이미지 없음요"); %>
 			<img src="/FairMusic/images/temp.png"
 				class="img-circle img-responsive" alt="Placeholder image">
+				<%}else{ %>
+			<img src="/FairMusic/FM_audio_image/<%=audiodto.getAudio_code()%>.<%=audiodto.getAudio_image() %>" />
+			<%} %>
+				
 		</div>
 		<div class="col-sm-9">
 			<div class="row">
@@ -194,14 +211,14 @@ div #stampstatus>#bg {
 				</div>
 				<div class="col-sm-12">
 					<fieldset>
-						<legend>ㄴㅇㄹㄴㅇㄹ</legend>
+						<legend>Time stamp</legend>
 								<div class="row">
 									<div class="col-lg-4">
-									<h3><span class="label label-default">ㄴㅇㄹㅇㄴ</span></h3>
+									<h3><span class="label label-default">Time stamp</span></h3>
 									
 									</div>
 									<div class="col-lg-8">
-									<h3><span class="label label-default">타임스탬프자리</span></h3>
+									<h3><span class="label label-default"><%= Timestamp %></span></h3>
 									</div>
 								</div>
 					</fieldset>

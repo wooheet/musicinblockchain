@@ -102,7 +102,7 @@
 				}
 
 				function success_search(txt) {	    
-					$("#btcsearch").html("잔액 <br/>0."+txt+" BTC"); 
+					$("#btcsearch").html("<br/>0."+txt+" BTC"); 
 				}
 				
 				function success_txsearch(txt) {	    
@@ -149,8 +149,8 @@
 				<div class="row">
 					<div class="col-sm-12">
 						<fieldset>
-							<legend style=" font: italic bold 1.5em/1em Georgia, serif ;">FairMusic에서 나의 블록체인의 상태를 확인하세요<br/><br/><br/></legend><br/>
-								<span  style=" font: italic bold 1.5em/1em Georgia, serif ; color: black;">FairMusic은 음원 저작권을 블록체인 상에 보관함으로써 <br/><br/><br/>저작권자들의 창작물 권리를 보호해줍니다.<br/><br/><br/>블록체인에 삽입된 음원 검색 및 블록체인 세부 거래 정보를 검색해보세요!
+							<legend style=" font: bold 1.5em/1em Georgia, serif ;">FairMusic에서 나의 블록체인의 상태를 확인하세요<br/><br/><br/></legend><br/>
+								<span  style=" font: bold 1.5em/1em Georgia, serif ; color: grey;">FairMusic은 음원 저작권을 블록체인 상에 보관함으로써 <br/><br/><br/>저작권자들의 창작물 권리를 보호해줍니다.<br/><br/><br/>블록체인에 삽입된 음원 검색 및 블록체인 세부 거래 정보를 검색해보세요!
 								 <br>
 							</span>
 						</fieldset>
@@ -196,7 +196,7 @@
 								<tbody>
 										<tr>
 											<td><input type="button" value="Create Bitcoin" class="btn btn-info btn-lg "  id="create"/></td>
-											<td id="mybtc" style ="font: italic bold 1.5em/1em Georgia, serif ;color:red;"></td>
+											<td id="mybtc" style ="font:bold 1.5em/1em Georgia, serif ;color:red;"></td>
 											<td><input type="button" value="Delete" class="btn btn-info btn-lg "  id="delete"/></td>
 										</tr>
 										
@@ -220,7 +220,7 @@
 									<tbody>
 											<tr>
 												<td><input type="text" name="btcval" placeholder="bitcoin Address" id="btcval" size="70" style= "font-size:12pt; color:#ff0000; font-weight:bold; border: 1px solid #ff0000;"></td>
-												<td id="btcsearch" style ="color:red;"></td>
+												<td id="btcsearch" style ="font:bold 1.5em/1em Georgia, serif ;color:red;"></td>
 												<td><input type="button" value="Search" class="btn btn-info btn-lg "  id="search"/></td>
 											</tr>
 									</tbody>
@@ -245,7 +245,7 @@
 									
 							</table>
 									
-								<div id="txId" style ="font: italic bold 1.5em/1em Georgia, serif ;color:red;"></div>
+								<div id="txId" style ="font: bold 1.5em/1em Georgia, serif ;color:red;"></div>
 							</form>
 						</div>
 						
@@ -260,19 +260,19 @@
 									<tbody>
 										<tr>
 											<th>BestBlock</th>
-											<th id="BestBlock" style ="font: italic bold 1.5em/1em Georgia, serif ;color:red; text-align : left;" ></th>
+											<th id="BestBlock" style ="font:  bold 1.5em/1em Georgia, serif ;color:red; text-align : left;" ></th>
 										</tr>
 										<tr>
 											<th>ParentId</th>
-											<td id="ParentId" style ="font: italic bold 1.5em/1em Georgia, serif ;color:red; text-align : left;"></td>
+											<td id="ParentId" style ="font:bold 1.5em/1em Georgia, serif ;color:red; text-align : left;"></td>
 										</tr>
 										<tr>
 											<th>Height</th>
-											<td id="Height" style ="font: italic bold 1.5em/1em Georgia, serif ;color:red;text-align : left;"></td>
+											<td id="Height" style ="font:  bold 1.5em/1em Georgia, serif ;color:red;text-align : left;"></td>
 										</tr>
 										<tr>
 											<th>BlockConfirmationTime</th>
-											<td id="BlockConfirmationTime" style ="font: italic bold 1.5em/1em Georgia, serif ;color:red;text-align : left;" ></td>
+											<td id="BlockConfirmationTime" style ="font: bold 1.5em/1em Georgia, serif ;color:red;text-align : left;" ></td>
 										</tr>
 									</tbody>
 								</table>
@@ -293,7 +293,7 @@
 									</tbody>
 								</table>
 
-								<div id="txId2" style ="font: italic bold 1.5em/1em Georgia, serif ;color:red;text-align : left;"></div> 
+								<div id="txId2" style ="font: bold 1.5em/1em Georgia, serif ;color:red;text-align : left;"></div> 
 						</div>
 				</div>
 			</div>``

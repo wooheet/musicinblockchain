@@ -31,9 +31,15 @@
 <%System.out.println("이미지패스"+audioImagePath); %>
 <%if(dto.getAudio_alive().equals("1")){ %>
 <% String imagename = audio_code+"."+dto.getAudio_image(); %> 
+
 <div class="container">
+<%  if(dto.getAudio_image()!=null){ %>
   <div class="player" style="
 background-image: URL('/FairMusic/FM_audio_image/<%= imagename%>')">
+<%}else{ %>
+<div class="player" style="
+background-image: URL('/FairMusic/images/line.png')">
+<%} %>
     <div class="like waves-effect waves-light">
       <i class="icon-heart"></i>
     </div>

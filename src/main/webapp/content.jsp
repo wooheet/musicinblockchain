@@ -70,6 +70,18 @@
 	box-sizing: border-box;
 	cursor: pointer;
 }
+
+.mainimg{
+width: 400px;
+border: 1px;
+border-color: orange;
+}
+.mainimgno{
+width: 400px;
+height : 200px;
+border: 1px;
+border-color: orange;
+}
 </style>
 
 <script type="text/javascript">
@@ -101,82 +113,41 @@
       <div class="row">
       <div class="12u">
       <br/><br/>
-       <ol class="list-group">
-         <li class="list-group-item disabled">조성원님의 최근 게시글</li>
-          <li class="list-group-item">
+      <jsp:include page="/ten.do"></jsp:include>
 
-<jsp:include page="/ten.do"></jsp:include>
-        <%ArrayList<audioDTO> dtolist = (ArrayList<audioDTO>)request.getAttribute("recent10"); %>
+       <ol class="list-group">
+               <%ArrayList<audioDTO> dtolist = (ArrayList<audioDTO>)request.getAttribute("recent10"); %>
         <% if(dtolist!=null){%>
         <%int size = dtolist.size(); %>
         <%if(size!=0){ %>
         <%for(int i = 0; i < size;i++){ %>
         <%audioDTO dto = dtolist.get(i); %>
+         <li class="list-group-item disabled"><%=dto.getAudio_date() %></li>
+          <li class="list-group-item">
+
+
         
-		<a href="/FairMusic/audiopage.do?audio_code=<%=dto.getAudio_code()%>">바로가기</a>
-		<button type = "button" onclick ="window.open('/FairMusic/audiopage.do?audio_code=<%=dto.getAudio_code()%>')"> 상세페이지 이동 </button>
+        <h3>
+						<span class="label label-default">
+						<%=dto.getAudio_title() %>
+						</span>
+					</h3>
+        <br/>
+		<%if(dto.getAudio_image()!=null){ %>
+		<a href="/FairMusic/audiopage.do?audio_code=<%=dto.getAudio_code()%>" ><img class = "mainimg" alt="사진" src="/FairMusic/FM_audio_image/<%=dto.getAudio_code()%>.<%=dto.getAudio_image()%>"></a>
+		<%}else{ %>
+		<a href="/FairMusic/audiopage.do?audio_code=<%=dto.getAudio_code()%>" ><img class = "mainimgno" alt="사진" src="/FairMusic/images/line.png"></a>
+		<%} %>
 <hr/>
-		<%} %>
-		<%} %>
-	<%} %> 
-<%-- 		<jsp:include page="/widget.do">
-		<jsp:param value="33857szat02s2q8h21l3" name="audio_code"/>
-		<jsp:param value="1" name="audioindex"/>
-		</jsp:include>   --%>
-		
+ 
 
-		
-
-		 
- 	 	   
-	 
-		
-<%--<a href= "/FairMusic/widget.do">서블릿->웹</a>
-         <jsp:include page ="/widget.do"></jsp:include> --%>
- 			<%-- <jsp:include page="<%= application.getContextPath()%>/widget/fmWidget.jsp">
-         <jsp:param value="e6ddn02ie17ngn4a1l44" name="audio_code"/>
-         </jsp:include>  --%>
-         
-<%--          <%
-	RequestDispatcher dispather = request.getRequestDispatcher("/widget.do?audio_code=e6ddn02ie17ngn4a1l44");
-         
-	dispather.include(request,response);
-%> --%>
-<%-- <% if(request.getRequestURL().equals("http://localhost:8088/FairMusic/layout/mainLayout.jsp")){ %>
-<jsp:include page="/widget.do">
-		<jsp:param value="e6ddn02ie17ngn4a1l44" name="audio_code"/>
-		</jsp:include>
-<%} %> --%>
-<%--          <% if(request.getRequestURL().equals("http://localhost:8088/FairMusic/layout/mainLayout.jsp")){ %>
-         <jsp:include page="../widget/fmWidget.jsp">
-         <jsp:param value="e6ddn02ie17ngn4a1l44" name="audio_code"/>
-         </jsp:include>
-         <%}else{ %>
-         <jsp:include page="widget/fmWidget.jsp">
-         <jsp:param value="e6ddn02ie17ngn4a1l44" name="audio_code"/>
-         </jsp:include>
-         <%} %> --%>
-         
-         
-       
-         <%-- <jsp:include page="/widget/temp2widget.jsp"></jsp:include> --%>
-<!--           </li>
-          <li class="list-group-item disabled">한준희님의 최근 게시글</li>
-          <li class="list-group-item">
-          <a href="#"><img src="/FairMusic/images/M.PNG" class="img-thumbnail" alt="Cinque Terre" width="200" height="200"></a>
-          <a href="#">한준희</a>-<a href="#"> 냠냠송</a>
-          <a href="#"><img src="/FairMusic/images/like.PNG" class="img-thumbnail" alt="Cinque Terre" width="20" height="20"></a>
-          <a href="#"><img src="/FairMusic/images/like.PNG" class="img-thumbnail" alt="Cinque Terre" width="20" height="20"></a>
-          <a href="#"><img src="/FairMusic/images/like.PNG" class="img-thumbnail" alt="Cinque Terre" width="20" height="20"></a>
+          
           </li>
-          <li class="list-group-item disabled">우해원님의 최근 게시글</li>
-          <li class="list-group-item">
-          <a href="#"><img src="/FairMusic/images/M.PNG" class="img-thumbnail" alt="Cinque Terre" width="200" height="200"></a>
-          <a href="#">한준희</a>-<a href="#"> 수박송</a>
-          <a href="#"><img src="/FairMusic/images/like.PNG" class="img-thumbnail" alt="Cinque Terre" width="20" height="20"></a>
-          <a href="#"><img src="/FairMusic/images/like.PNG" class="img-thumbnail" alt="Cinque Terre" width="20" height="20"></a>
-          <a href="#"><img src="/FairMusic/images/like.PNG" class="img-thumbnail" alt="Cinque Terre" width="20" height="20"></a>
-          </li>    -->   
+          		<%} %>
+		<%} %>
+	<%} %>
+          
+          
           
       </ol>
       </div>

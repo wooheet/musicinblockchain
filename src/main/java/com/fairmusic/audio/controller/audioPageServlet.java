@@ -1,6 +1,7 @@
 package com.fairmusic.audio.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.blocko.dto.BitcoinAdressDTO;
+import com.blocko.service.BlockoService;
+import com.blocko.service.BlockoServiceImpl;
 import com.fairmusic.album.service.AlbumService;
 import com.fairmusic.album.service.AlbumServiceimpl;
 import com.fairmusic.artist.service.ArtistServiceimpl;
@@ -53,13 +57,19 @@ public class audioPageServlet extends HttpServlet {
 		String rightpath = request.getParameter("rightpath");
 
 		
+
+		
+		BlockoService bservice = new BlockoServiceImpl();
+		
+		ArrayList<BitcoinAdressDTO> blist = bservice.bitcoinAdressSelect(audio_code);
+	      
+
+	    request.setAttribute("blist", blist);
+
 		request.setAttribute("leftpath", leftpath);
 		request.setAttribute("rightpath", rightpath);
 		RequestDispatcher rd = request.getRequestDispatcher("/layout/mainLayout.jsp");
 		rd.forward(request, response);
-		
-
-		
 	}
 
 }

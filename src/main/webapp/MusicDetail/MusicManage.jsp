@@ -134,8 +134,15 @@ div #stampstatus>#bg {
 	</div>
 	<div class="row">
 		<div class="col-sm-3">
+		
+				<% if(audiodto.getAudio_image()==null){%>
+		<%System.out.println("오디오이미지 없음요"); %>
 			<img src="/FairMusic/images/temp.png"
 				class="img-circle img-responsive" alt="Placeholder image">
+				<%}else{ %>
+			<img src="/FairMusic/FM_audio_image/<%=audiodto.getAudio_code()%>.<%=audiodto.getAudio_image() %>" />
+			<%} %>
+				
 		</div>
 		<div class="col-sm-9">
 			<div class="row">

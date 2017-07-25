@@ -43,11 +43,19 @@ public class audioBitPageServlet extends HttpServlet {
 		Stamp stamp;
 		try {
 			DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
-			stamp = coinstack.getStamp(musicstamp.getStampId());
 			System.out.println("musicstamp"+musicstamp);
-			System.out.println("stamp"+stamp);
 			System.out.println("dateFormat"+dateFormat);
+			stamp = coinstack.getStamp(musicstamp.getStampId());
+			
+			System.out.println("stamp"+stamp);
+			
 			System.out.println(stamp.getTimestamp());
+			if(stamp.getTimestamp()!=null){
+				String Timestamp = dateFormat.format(stamp.getTimestamp());
+				request.setAttribute("Timestamp", Timestamp);
+			}else{
+				request.setAttribute("Timestamp", "Timestamp 정보가 아직 등록되지 않았습니다. 음원 등록 이후 약 2~3시간 경과 후에 확인해주시길 바랍니다.");
+			}
 /*			String Timestamp = dateFormat.format(stamp.getTimestamp());
 			request.setAttribute("Timestamp", Timestamp);*/
 			request.setAttribute("musicName", audiodto.getAudio_title());
